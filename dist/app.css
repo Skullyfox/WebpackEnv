@@ -1,114 +1,5 @@
-@keyframes InfiniteRotate {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-
 body {
-  background-color: #f5f6fa;
-  color: #636e72;
-  margin: 0;
-  padding: 0; }
-  body .Container {
-    height: 100vh; }
-    body .Container .Header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 50vh;
-      width: 100vw; }
-      body .Container .Header .Logo {
-        width: 250px;
-        animation: InfiniteRotate 10s infinite linear; }
-      body .Container .Header .Title {
-        margin: 0;
-        font-family: "Niramit";
-        font-size: 1.5em;
-        text-align: center; }
-      body .Container .Header .Subtitle {
-        margin: 0;
-        font-family: "Niramit";
-        font-size: 0.8em;
-        color: #74b9ff; }
-    body .Container .Documentation {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      min-height: 50vh;
-      width: 100vw; }
-      body .Container .Documentation .Card {
-        display: grid;
-        grid-template-rows: 50px 1fr;
-        padding: 10px; }
-        body .Container .Documentation .Card .CardHeader {
-          text-align: center;
-          position: relative;
-          font-size: 1.5em;
-          color: #74b9ff;
-          font-family: "Niramit";
-          border-top: 1px solid #74b9ff;
-          border-bottom: 1px solid #74b9ff;
-          transition: .2s; }
-          body .Container .Documentation .Card .CardHeader.actif {
-            background-color: #74b9ff;
-            color: #f5f6fa; }
-            body .Container .Documentation .Card .CardHeader.actif:hover {
-              filter: brightness(120%);
-              cursor: pointer; }
-          body .Container .Documentation .Card .CardHeader:hover {
-            background-color: #74b9ff;
-            color: #f5f6fa;
-            cursor: pointer; }
-          body .Container .Documentation .Card .CardHeader::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%; }
-        body .Container .Documentation .Card .CardBody {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          font-family: "Niramit";
-          color: #636e72;
-          height: 0%;
-          overflow: hidden;
-          transition: all 1s;
-          border-bottom: 1px solid rgba(116, 185, 255, 0); }
-          body .Container .Documentation .Card .CardBody * {
-            transition: opacity 2s;
-            opacity: 0; }
-          body .Container .Documentation .Card .CardBody.actif {
-            border-color: #74b9ff;
-            height: 100%; }
-            body .Container .Documentation .Card .CardBody.actif * {
-              opacity: 1; }
-          body .Container .Documentation .Card .CardBody p {
-            font-size: 1.3em;
-            margin: 0;
-            padding: 0; }
-          body .Container .Documentation .Card .CardBody ul {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            margin: 0;
-            padding: 0;
-            width: 100%; }
-            body .Container .Documentation .Card .CardBody ul li {
-              list-style: none;
-              display: flex;
-              flex-direction: column;
-              text-align: center;
-              padding: 15px; }
-              body .Container .Documentation .Card .CardBody ul li:hover {
-                color: #74b9ff; }
-              body .Container .Documentation .Card .CardBody ul li i {
-                font-size: 4em;
-                transition: all .2s; }
-              body .Container .Documentation .Card .CardBody ul li .StackSubtitle {
-                font-size: 1em;
-                font-family: "Niramit"; }
+  background: #25a2e2; }
 
 @media screen and (max-width: 1000px) {
   body .Container .Documentation {
@@ -117,6 +8,12 @@ body {
     body .Container .Documentation .Card {
       padding: 0;
       margin: 5px 0 0 0; }
-      body .Container .Documentation .Card .CardBody p {
-        font-size: 1em; } }
+      body .Container .Documentation .Card .CardBody {
+        height: 100%; }
+        body .Container .Documentation .Card .CardBody * {
+          opacity: 1; }
+        body .Container .Documentation .Card .CardBody p {
+          font-size: 1em; }
+        body .Container .Documentation .Card .CardBody.actif {
+          border-color: rgba(116, 185, 255, 0); } }
 
