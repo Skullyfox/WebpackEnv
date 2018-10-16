@@ -1,0 +1,17 @@
+@media screen and (max-width: 1000px)
+  body
+    .Container
+      .Documentation
+        display: grid
+        grid-template-columns: 1fr
+        .Card
+          padding: 0
+          margin: 5px 0 0 0
+          .CardBody
+            height: 100%
+            *
+              opacity: 1
+            p
+              font-size: 1em
+            &.actif
+              border-color: rgba(#74b9ff,0)
